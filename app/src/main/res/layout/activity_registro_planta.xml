@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_gradiente">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_login"
+            android:padding="28dp"
+            android:elevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="@drawable/card_login">
+
+                <TextView
+                    android:id="@+id/tvTituloFormulario"
+                    android:layout_width="189dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Nueva Planta"
+                    android:textColor="@color/texto_oscuro"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center"
+                    android:background="@drawable/helecho" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de planta"
+                android:textColor="@color/texto_oscuro"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spTipoPlanta"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/card_login"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etNombrePlanta"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Nombre de la planta"
+                android:inputType="text"
+                android:textColorHint="@color/texto_oscuro"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etNombreCientifico"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Nombre científico (opcional)"
+                android:inputType="text"
+                android:textColorHint="@color/texto_oscuro"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etFechaSiembra"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Fecha de siembra"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColorHint="@color/texto_oscuro"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etMetodoSiembra"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Método de siembra (opcional)"
+                android:inputType="text"
+                android:textColorHint="@color/texto_oscuro"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etObservaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Observaciones (opcional)"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:gravity="top|start"
+                android:textColorHint="@color/texto_oscuro"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/btnGuardarPlanta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:backgroundTint="@color/verde_oliva"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:backgroundTint="@color/terracota"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
