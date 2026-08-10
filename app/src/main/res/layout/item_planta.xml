@@ -9,6 +9,7 @@
     android:padding="14dp"
     android:layout_marginBottom="10dp">
 
+    <!-- Zona con los datos de la planta -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -32,8 +33,18 @@
             android:textSize="13sp"
             tools:text="Ornamental" />
 
+        <TextView
+            android:id="@+id/tvFechaPlanta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/texto_oscuro"
+            android:textSize="11sp"
+            android:visibility="gone"
+            tools:text="Sembrada: 2026-08-05" />
+
     </LinearLayout>
 
+    <!-- Botones: ver detalle, editar y eliminar -->
     <ImageButton
         android:id="@+id/btnVerDetalle"
         android:layout_width="48dp"

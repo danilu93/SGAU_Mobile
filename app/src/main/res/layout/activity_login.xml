@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_gradiente">
 
+    <!-- Tarjeta central del formulario de inicio de sesión -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +17,7 @@
         android:padding="32dp"
         android:elevation="8dp">
 
+        <!-- Logo de la aplicación -->
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="180dp"
@@ -24,6 +26,7 @@
             android:background="@drawable/logo"
             android:contentDescription="Logo de la app" />
 
+        <!-- Campo de usuario -->
         <EditText
             android:id="@+id/etUsuario"
             android:layout_width="match_parent"
@@ -34,6 +37,7 @@
             android:textColor="@color/texto_oscuro"
             android:textColorHint="@color/texto_oscuro" />
 
+        <!-- Campo de contraseña -->
         <EditText
             android:id="@+id/etContrasena"
             android:layout_width="match_parent"
@@ -44,6 +48,16 @@
             android:textColor="@color/texto_oscuro"
             android:textColorHint="@color/texto_oscuro" />
 
+        <!-- Casilla para mostrar u ocultar la contraseña -->
+        <CheckBox
+            android:id="@+id/cbMostrarContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar contraseña"
+            android:textColor="@color/texto_oscuro"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Botón para iniciar sesión -->
         <Button
             android:id="@+id/btnIniciarSesion"
             android:layout_width="match_parent"
@@ -52,6 +66,7 @@
             android:text="Iniciar sesión"
             android:textColor="#FFFFFF" />
 
+        <!-- Enlace a la pantalla de registro -->
         <TextView
             android:id="@+id/tvIrRegistro"
             android:layout_width="wrap_content"

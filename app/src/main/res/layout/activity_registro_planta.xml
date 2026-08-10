@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_gradiente">
 
+    <!-- Permite desplazarse si el contenido no cabe en pantalla -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Tarjeta del formulario de la planta -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,6 +20,7 @@
             android:padding="28dp"
             android:elevation="8dp">
 
+            <!-- Encabezado del formulario -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,6 +59,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="4dp" />
 
+            <!-- Selector del tipo de planta -->
             <Spinner
                 android:id="@+id/spTipoPlanta"
                 android:layout_width="match_parent"
@@ -64,6 +68,7 @@
                 android:padding="8dp"
                 android:layout_marginBottom="16dp" />
 
+            <!-- Campo del nombre de la planta -->
             <EditText
                 android:id="@+id/etNombrePlanta"
                 android:layout_width="match_parent"
@@ -73,6 +78,36 @@
                 android:textColorHint="@color/texto_oscuro"
                 android:textColor="@color/texto_oscuro"
                 android:layout_marginBottom="12dp" />
+
+            <!-- Campo de fecha de siembra (abre un calendario) -->
+            <EditText
+                android:id="@+id/etFechaSiembra"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Fecha de siembra"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColorHint="@color/texto_oscuro"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginBottom="12dp" />
+
+        <!-- Casilla para mostrar u ocultar los campos opcionales -->
+        <CheckBox
+            android:id="@+id/cbMostrarOpcionales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar campos opcionales"
+            android:textColor="@color/texto_oscuro"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Contenedor con los campos opcionales -->
+        <LinearLayout
+            android:id="@+id/contenedorOpcionales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
 
             <EditText
                 android:id="@+id/etNombreCientifico"
@@ -84,16 +119,7 @@
                 android:textColor="@color/texto_oscuro"
                 android:layout_marginBottom="12dp" />
 
-            <EditText
-                android:id="@+id/etFechaSiembra"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="Fecha de siembra"
-                android:focusable="false"
-                android:clickable="true"
-                android:textColorHint="@color/texto_oscuro"
-                android:textColor="@color/texto_oscuro"
-                android:layout_marginBottom="12dp" />
+
 
             <EditText
                 android:id="@+id/etMetodoSiembra"
@@ -117,6 +143,9 @@
                 android:textColor="@color/texto_oscuro"
                 android:layout_marginBottom="20dp" />
 
+        </LinearLayout>
+
+            <!-- Botón para guardar la planta -->
             <Button
                 android:id="@+id/btnGuardarPlanta"
                 android:layout_width="match_parent"
@@ -126,6 +155,7 @@
                 android:textColor="#FFFFFF"
                 android:layout_marginBottom="10dp" />
 
+            <!-- Botón para cancelar y salir sin guardar -->
             <Button
                 android:id="@+id/btnCancelar"
                 android:layout_width="match_parent"

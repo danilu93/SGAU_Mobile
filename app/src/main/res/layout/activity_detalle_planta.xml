@@ -6,126 +6,156 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_gradiente">
 
+    <!-- Permite desplazarse si el contenido no cabe en pantalla -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Tarjeta con la información de la planta -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
-            android:orientation="vertical"
             android:background="@drawable/card_login"
-            android:padding="28dp"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:padding="28dp">
 
+            <!-- Nombre de la planta -->
             <TextView
                 android:id="@+id/tvDetalleNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
                 android:textColor="@color/texto_oscuro"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginBottom="4dp"
                 tools:text="Guaria Morada" />
 
+            <!-- Tipo de la planta -->
             <TextView
                 android:id="@+id/tvDetalleTipo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
                 android:textColor="@color/terracota"
                 android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginBottom="20dp"
                 tools:text="Ornamental" />
 
+            <!-- Etiqueta y valor del nombre científico -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nombre científico"
                 android:textColor="@color/texto_oscuro"
-                android:textStyle="bold"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvDetalleNombreCientifico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/texto_oscuro"
                 android:layout_marginBottom="14dp"
+                android:textColor="@color/texto_oscuro"
                 tools:text="Schlumbergera truncata" />
 
+            <!-- Etiqueta y valor de la fecha de siembra -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fecha de siembra"
                 android:textColor="@color/texto_oscuro"
-                android:textStyle="bold"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvDetalleFechaSiembra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/texto_oscuro"
                 android:layout_marginBottom="14dp"
+                android:textColor="@color/texto_oscuro"
                 tools:text="2026-03-10" />
 
-            <TextView
+            <!-- Casilla para mostrar u ocultar la información adicional -->
+            <CheckBox
+                android:id="@+id/cbMostrarAdicional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Mostrar información adicional"
+                android:textColor="@color/texto_oscuro" />
+
+            <!-- Contenedor con la información adicional -->
+            <LinearLayout
+                android:id="@+id/contenedorAdicional"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Método de siembra"
-                android:textColor="@color/texto_oscuro"
-                android:textStyle="bold"
-                android:textSize="12sp" />
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <TextView
-                android:id="@+id/tvDetalleMetodoSiembra"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/texto_oscuro"
-                android:layout_marginBottom="14dp"
-                tools:text="Trasplante de esqueje" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fecha de registro"
-                android:textColor="@color/texto_oscuro"
-                android:textStyle="bold"
-                android:textSize="12sp" />
+                <!-- Etiqueta y valor del método de siembra -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Método de siembra"
+                    android:textColor="@color/texto_oscuro"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvDetalleFechaRegistro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/texto_oscuro"
-                android:layout_marginBottom="14dp"
-                tools:text="2026-01-15" />
+                <TextView
+                    android:id="@+id/tvDetalleMetodoSiembra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="@color/texto_oscuro"
+                    tools:text="Trasplante de esqueje" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Observaciones"
-                android:textColor="@color/texto_oscuro"
-                android:textStyle="bold"
-                android:textSize="12sp" />
+                <!-- Etiqueta y valor de la fecha de registro -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de registro"
+                    android:textColor="@color/texto_oscuro"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvDetalleObservaciones"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/texto_oscuro"
-                android:layout_marginBottom="24dp"
-                tools:text="Regar cada 10 días." />
+                <TextView
+                    android:id="@+id/tvDetalleFechaRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="@color/texto_oscuro"
+                    tools:text="2026-01-15" />
 
+                <!-- Etiqueta y valor de las observaciones -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Observaciones"
+                    android:textColor="@color/texto_oscuro"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetalleObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:textColor="@color/texto_oscuro"
+                    tools:text="Regar cada 10 días." />
+
+            </LinearLayout>
+
+            <!-- Botón para cerrar la pantalla -->
             <Button
                 android:id="@+id/btnCerrarDetalle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cerrar"
                 android:backgroundTint="@color/verde_oliva"
+                android:text="Cerrar"
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>

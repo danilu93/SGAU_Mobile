@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_gradiente">
 
+    <!-- Permite desplazarse si el contenido no cabe en pantalla -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Tarjeta del formulario de registro -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,6 +21,7 @@
             android:padding="32dp"
             android:elevation="8dp">
 
+            <!-- Logo de la aplicación -->
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -26,6 +29,7 @@
                 android:background="@drawable/logo"
                 android:contentDescription="Logo de la app" />
 
+            <!-- Título del formulario -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -35,6 +39,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp" />
 
+            <!-- Campo de nombre de usuario -->
             <EditText
                 android:id="@+id/etNombreUsuario"
                 android:layout_width="match_parent"
@@ -45,6 +50,7 @@
                 android:textColor="@color/texto_oscuro"
                 android:layout_marginBottom="12dp" />
 
+            <!-- Campo de correo electrónico -->
             <EditText
                 android:id="@+id/etCorreo"
                 android:layout_width="match_parent"
@@ -55,6 +61,7 @@
                 android:textColor="@color/texto_oscuro"
                 android:layout_marginBottom="12dp" />
 
+            <!-- Campo de contraseña -->
             <EditText
                 android:id="@+id/etContrasena"
                 android:layout_width="match_parent"
@@ -63,8 +70,18 @@
                 android:inputType="textPassword"
                 android:textColorHint="@color/texto_oscuro"
                 android:textColor="@color/texto_oscuro"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="5dp" />
 
+            <!-- Casilla para mostrar u ocultar la contraseña -->
+            <CheckBox
+                android:id="@+id/cbMostrarContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar contraseña"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Campo para confirmar la contraseña -->
             <EditText
                 android:id="@+id/etConfirmarContrasena"
                 android:layout_width="match_parent"
@@ -73,7 +90,16 @@
                 android:inputType="textPassword"
                 android:textColorHint="@color/texto_oscuro"
                 android:textColor="@color/texto_oscuro"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="5dp" />
+
+            <!-- Casilla para mostrar u ocultar la confirmación -->
+            <CheckBox
+                android:id="@+id/cbMostrarConfirmacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar confirmación"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginBottom="10dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -83,6 +109,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="4dp" />
 
+            <!-- Selección del rol del nuevo usuario -->
             <RadioGroup
                 android:id="@+id/rgRol"
                 android:layout_width="match_parent"
@@ -114,6 +141,7 @@
 
             </RadioGroup>
 
+            <!-- Botón para registrarse -->
             <Button
                 android:id="@+id/btnRegistrarse"
                 android:layout_width="match_parent"
@@ -122,6 +150,7 @@
                 android:backgroundTint="@color/verde_oliva"
                 android:textColor="#FFFFFF" />
 
+            <!-- Enlace a la pantalla de inicio de sesión -->
             <TextView
                 android:id="@+id/tvIrLogin"
                 android:layout_width="wrap_content"

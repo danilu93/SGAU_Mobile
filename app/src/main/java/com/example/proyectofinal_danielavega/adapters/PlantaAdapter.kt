@@ -13,6 +13,7 @@ import com.example.proyectofinal_danielavega.models.Planta
 class PlantaAdapter(
     private var plantas: List<Planta>,
     private val esConsulta: Boolean,
+    private var mostrarFecha: Boolean,
     private val onVerDetalleClick: (Planta) -> Unit,
     private val onEditarClick: (Planta) -> Unit,
     private val onEliminarClick: (Planta) -> Unit
@@ -22,6 +23,7 @@ class PlantaAdapter(
     class PlantaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombrePlanta)
         val tvTipo: TextView = itemView.findViewById(R.id.tvTipoPlanta)
+        val tvFecha: TextView = itemView.findViewById(R.id.tvFechaPlanta)
         val btnVerDetalle: ImageButton = itemView.findViewById(R.id.btnVerDetalle)
         val btnEditar: ImageButton = itemView.findViewById(R.id.btnEditarPlanta)
         val btnEliminar: ImageButton = itemView.findViewById(R.id.btnEliminarPlanta)
@@ -40,6 +42,13 @@ class PlantaAdapter(
 
         holder.tvNombre.text = planta.nombrePlanta
         holder.tvTipo.text = planta.tipoPlanta.etiqueta
+
+        if (mostrarFecha) {
+            holder.tvFecha.visibility = View.VISIBLE
+            holder.tvFecha.text = "Sembrada: ${planta.fechaSiembra ?: "No especificado"}"
+        } else {
+            holder.tvFecha.visibility = View.GONE
+        }
 
         holder.btnVerDetalle.setOnClickListener { onVerDetalleClick(planta) }
 
@@ -60,8 +69,9 @@ class PlantaAdapter(
     override fun getItemCount(): Int = plantas.size
 
     // Actualiza la lista de plantas y notifica al adaptador que los datos han cambiado
-    fun actualizarLista(nuevaLista: List<Planta>) {
+    fun actualizarLista(nuevaLista: List<Planta>, mostrarFechaAhora: Boolean) {
         plantas = nuevaLista
+        mostrarFecha = mostrarFechaAhora
         notifyDataSetChanged()
     }
 }

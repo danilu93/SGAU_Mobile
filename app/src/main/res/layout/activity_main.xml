@@ -7,11 +7,13 @@
     android:layout_height="match_parent"
     android:background="@color/fondo_principal">
 
+    <!-- Contenido principal de la pantalla -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!-- Encabezado con logo, título y usuario -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,6 +71,7 @@
         </LinearLayout>
 
 
+        <!-- Título de la sección y logo -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,6 +104,7 @@
 
         </LinearLayout>
 
+        <!-- Campo de búsqueda por nombre -->
         <EditText
             android:id="@+id/etBuscarNombre"
             android:layout_width="match_parent"
@@ -113,6 +117,7 @@
             android:padding="12dp"
             android:layout_marginBottom="12dp" />
 
+        <!-- Filtro por tipo de planta -->
         <Spinner
             android:id="@+id/spTipoPlanta"
             android:layout_width="match_parent"
@@ -122,6 +127,52 @@
             android:padding="8dp"
             android:layout_marginBottom="16dp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ordenar por"
+            android:textColor="@color/texto_oscuro"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Opciones para ordenar la lista -->
+        <RadioGroup
+            android:id="@+id/rgOrden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbOrdenNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textColor="@color/texto_oscuro"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbOrdenTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginStart="16dp" />
+
+            <RadioButton
+                android:id="@+id/rbOrdenFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textColor="@color/texto_oscuro"
+                android:layout_marginStart="16dp" />
+
+        </RadioGroup>
+
+        <!-- Lista de plantas -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPlantas"
             android:layout_width="match_parent"
@@ -132,6 +183,7 @@
 
     </LinearLayout>
 
+    <!-- Botón flotante para agregar una planta -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAgregarPlanta"
         android:layout_width="wrap_content"
